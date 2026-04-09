@@ -1,11 +1,11 @@
 from fastapi import FastAPI
-import uvicorn
 
-app = FastAPI()
+app = FastAPI() # created kitchen
 
-
-@app.get("/")
+@app.post("/") #if someone requests at / with POST, GET
 def root():
+
+    # Process 
     return {"message": "Mama Put is open"}
 
 @app.get("/rice")
@@ -16,5 +16,5 @@ def getRice():
 def getBeans():
     return {"message": "Beans is available"}
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+
+# => Web runs on Javascript { JSON :: Javascript Object Notation }
