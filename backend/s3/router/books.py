@@ -7,6 +7,8 @@ router = APIRouter()
 
 # if it is successful, tell teh client we had an error
 
+
+
 @router.get("/books", status_code=500)
 async def get_books():
     return {"message": "Fetching books..."}
